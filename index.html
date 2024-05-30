@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./images/favicon.png"/>
+    <title>Horizon</title>
+</head>
+<body>
+    <header id="intro">
+        <div class="container">
+            <div class="menu-wrapper">
+                <img src="./images/logo2.png" alt="logo">
+                <a href="#intro">Intro</a>
+                <a href="#why">Why choose us</a>
+                <a href="#hot">Hot places🔥</a>
+                <a href="#footer">Contact Us</a>
+            </div>
+
+            <div class="main-wrapper">
+                <!-- <img src="./images/mainbg2.png" alt=""> -->
+                <h1>Welcome to Horizon</h1>
+                <h2>Where Dreams Meet Destinations</h2>
+                <a href="#search" class="intro-search"><img src="./images/glass.png" alt=""><p class="intro-search-p">Start Searching</p></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="why" id="why">
+        <div class="container">
+            <h2>Why should you choose Horizon?</h2>
+            <p class="just">Just look at these numbers</p>
+
+            <div class="cards-container">
+                <div class="card">
+                    <img src="./images/tick.png" alt="" class="tick">
+                    <div class="card-text-container">
+                        <h3>10 000+</h3>
+                        <p>Satisfied clients</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./images/handshake.png" alt="" class="handshake">
+                    <div class="card-text-container">
+                        <h3>30+</h3>
+                        <p>Countries are partners with our agency</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./images/medal.png" alt="" class="medal">
+                    <div class="card-text-container">
+                        <h3>Top 3</h3>
+                        <p>Agency in the country</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="pre-search">
+        <div class="container">
+            <h2>Search for trips with your preferences</h2>
+            <p class="pre-search-desc">Select what preferences you like and hit Search!</p>
+            <p><i>But first take a look at</i></p>
+        </div>
+        
+    </section>
+
+    <section class="hot-destinations" id="hot">
+        <h2>Hot tourist destinations</h2>
+        <p>You might wanna check 'em out!</p>
+
+        <div class="hot-container">
+            <button class="left-button hot-button"><</button>
+            
+            <div class="hot-cards-container">
+                <div class="slider-container">
+                    <div class="hot-card">
+                        <h3>USA</h3>
+                        <img src="./images/statue.png" alt="">
+                    </div>
+        
+                    <div class="hot-card">
+                        <img src="./images/uk.png" alt="">
+                        <h3>UK</h3>
+                    </div>
+        
+                    <div class="hot-card">
+                        <img src="./images/turkey.png" alt="">
+                        <h3>Turkey</h3>
+                    </div>
+                </div>
+            </div>
+
+            <button class="right-button hot-button">></button>
+        </div>
+    </section>
+
+    <section class="search" id="search">
+        <div class="search-container">
+            <div class="search-cards-container">
+
+                <div class="left-column">
+                    <!-- <div class="search-card">
+                        <p class="search-card-name">Trip 1</p>
+                        <p class="search-card-month">January</p>
+                        <p class="search-card-age">12</p>
+                        <p class="search-card-country">USA</p>
+                        <p class="search-card-price">2500</p>
+                    </div>
+
+                    <div class="search-card">
+                        <p class="search-card-name">Trip 3</p>
+                        <p class="search-card-month">February</p>
+                        <p class="search-card-age">16</p>
+                        <p class="search-card-country">USA</p>
+                        <p class="search-card-price">5500</p>
+                    </div> -->
+                </div>
+
+                <div class="right-column">
+                    <!-- <div class="search-card">
+                        <p class="search-card-name">Trip 2</p>
+                        <p class="search-card-month">January</p>
+                        <p class="search-card-age">8</p>
+                        <p class="search-card-country">Turkey</p>
+                        <p class="search-card-price">500</p>
+                    </div>
+
+                    <div class="search-card">
+                        <p class="search-card-name">Trip 4</p>
+                        <p class="search-card-month">March</p>
+                        <p class="search-card-age">10</p>
+                        <p class="search-card-country">UK</p>
+                        <p class="search-card-price">1250</p>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="filters">
+                <button class="months-button filter-button">Months<img src="./images/arrow.png" alt=""></button>
+
+                <ul class="months-filter-list filter-list">
+                    <li class="filter-list-option">
+                        <input class="all-month-checkbox" type="checkbox" name="All" id="">
+                        <p>All</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="month-checkbox" type="checkbox" name="January" id="">
+                        <p>January</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="month-checkbox" type="checkbox" name="February" id="">
+                        <p>February</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="month-checkbox" type="checkbox" name="March" id="">
+                        <p>March</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="month-checkbox" type="checkbox" name="April" id="">
+                        <p>April</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="month-checkbox" type="checkbox" name="May" id="">
+                        <p>May</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="month-checkbox" type="checkbox" name="June" id="">
+                        <p>June</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="month-checkbox" type="checkbox" name="July" id="">
+                        <p>July</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="month-checkbox" type="checkbox" name="August" id="">
+                        <p>August</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="month-checkbox" type="checkbox" name="September" id="">
+                        <p>September</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="month-checkbox" type="checkbox" name="October" id="">
+                        <p>October</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="month-checkbox" type="checkbox" name="November" id="">
+                        <p>November</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="month-checkbox" type="checkbox" name="December" id="">
+                        <p>December</p>
+                    </li>
+                </ul>
+
+                <button class="countries-button filter-button">Countries<img src="./images/arrow.png" alt=""></button>
+
+                <ul class="countries-filter-list filter-list">
+                    <li class="filter-list-option">
+                        <input class="all-countries-checkbox" type="checkbox" name="All" id="">
+                        <p>All</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="countries-checkbox" type="checkbox" name="USA" id="">
+                        <p>USA</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="countries-checkbox" type="checkbox" name="UK" id="">
+                        <p>UK</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="countries-checkbox" type="checkbox" name="Turkey" id="">
+                        <p>Turkey</p>
+                    </li>
+                </ul>
+
+                <button class="age-button filter-button">Minimum Age<img src="./images/arrow.png" alt=""></button>
+
+                <ul class="age-filter-list filter-list">
+                    <li class="filter-list-option">
+                        <input class="all-age-checkbox" type="checkbox" name="All" id="">
+                        <p>All</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="age-checkbox" type="checkbox" name="6" id="">
+                        <p>6</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="age-checkbox" type="checkbox" name="8" id="">
+                        <p>8</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="age-checkbox" type="checkbox" name="10" id="">
+                        <p>10</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="age-checkbox" type="checkbox" name="12" id="">
+                        <p>12</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="age-checkbox" type="checkbox" name="14" id="">
+                        <p>14</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="age-checkbox" type="checkbox" name="16" id="">
+                        <p>16</p>
+                    </li>
+                </ul>
+
+                <button class="price-button filter-button">Price<img src="./images/arrow.png" alt=""></button>
+
+                <ul class="price-filter-list filter-list">
+                    <li class="filter-list-option">
+                        <input class="all-price-checkbox" type="checkbox" name="All" id="">
+                        <p>All</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="price-checkbox" type="checkbox" name="0-750" id="">
+                        <p>< $750</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="price-checkbox" type="checkbox" name="750-1499" id="">
+                        <p>$750 – $1499</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="price-checkbox" type="checkbox" name="1500-2499" id="">
+                        <p>$1500 – $2499</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="price-checkbox" type="checkbox" name="2500-4999" id="">
+                        <p>$2500 – $4999</p>
+                    </li>
+
+                    <li class="filter-list-option">
+                        <input class="price-checkbox" type="checkbox" name="5000" id="">
+                        <p>$5000+</p>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-img-desc-container footer-section-container">
+                <img src="./images/logo-white.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos cum voluptas non voluptatem, aspernatur maxime. Voluptatem mollitia aut sint laudantium ducimus possimus impedit deleniti, ex molestias, dolor eligendi hic saepe officiis perspiciatis ut ea nobis non sed similique corporis magnam fugiat soluta tempore necessitatibus! Aut laudantium mollitia atque doloribus ad?</p>
+            </div>
+
+            <div class="footer-links-container footer-section-container">
+                <h3 class="footer-header">Useful Links</h3>
+
+                <div class="socials-container">
+                    <img src="./images/youtube.png" alt="">
+                    <img src="./images/twitter.png" alt="">
+                    <img src="./images/instagram.png" alt="">
+                </div>
+
+                <div class="footer-column-container">
+                    <div class="footer-left footer-column">
+                        <a href="">Home</a>
+                        <a href="">Services</a>
+                        <a href="">Contact</a>
+                        <a href="">About Us</a>
+                    </div>
+                    <div class="footer-right footer-column">
+                        <a href="">About</a>
+                        <a href="">Portfolio</a>
+                        <a href="">Expert team</a>
+                        <a href="">Latest News</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-subscribe-container footer-section-container">
+                <h3 class="footer-header">Subscribe</h3>
+                <p>Don't miss out on most recent news, subscribe below:</p>
+                <form id="form" action="#form" class="footer-form">
+                    <input class="footer-email" type="email" name="" id="" placeholder="Email Address">
+                    <div class="footer-button-container">
+                        <input class="footer-submit" type="submit" onclick="removeValue()">
+                        <!-- <img src="./images/telegram-arrow.png" alt=""> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
