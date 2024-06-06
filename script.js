@@ -22,8 +22,7 @@ let countriesCheckboxes = document.querySelectorAll(".countries-checkbox");
 let ageCheckboxes = document.querySelectorAll(".age-checkbox");
 let priceCheckboxes = document.querySelectorAll(".price-checkbox");
 
-let leftColumn = document.querySelector(".left-column");
-let rightColumn = document.querySelector(".right-column");
+let cardsContainer = document.querySelector(".search-cards-container");
 
 let offset = 0;
 let sliderInc = 300;
@@ -40,54 +39,69 @@ function removeValue() {
 }
 
 class SearchCard {
-    constructor(name, month, age, country, price, isLeft) {
+    constructor(name, month, age, country, price) {
         this.name = name;
         this.month = month;
         this.age = age;
         this.country = country;
         this.price = price;
-        this.isLeft = isLeft;
     }
 
     getCardElem() {
         let elem = document.createElement("div");
         elem.classList.add("search-card");
 
+        let img = document.createElement("img");
+        img.src = "./images/statue.png";
+
+        let cont = document.createElement("div");
+        cont.classList.add("search-card-container");
+
+        let priceCont = document.createElement("div");
+        priceCont.classList.add("search-card-price-container");
+
         let pName = document.createElement("div");
         pName.classList.add("search-card-name");
-        pName.innerHTML = this.name;
+        pName.innerHTML = "<b>Name: </b>" + this.name;
 
         let pMonth = document.createElement("div");
         pMonth.classList.add("search-card-month");
-        pMonth.innerHTML = this.month;
+        pMonth.innerHTML = "<b>Time: </b>" + this.month;
 
         let pAge = document.createElement("div");
         pAge.classList.add("search-card-age");
-        pAge.innerHTML = this.age;
+        pAge.innerHTML = "<b>Minimum age: </b>" + this.age;
 
         let pCountry = document.createElement("div");
         pCountry.classList.add("search-card-country");
-        pCountry.innerHTML = this.country;
+        pCountry.innerHTML = "<b>Location: </b>" + this.country;
 
         let pPrice = document.createElement("div");
         pPrice.classList.add("search-card-price");
-        pPrice.innerHTML = this.price;
+        pPrice.innerHTML = "from <b>" + this.price + "$</b>";
 
-        elem.appendChild(pName);
-        elem.appendChild(pMonth);
-        elem.appendChild(pAge);
-        elem.appendChild(pCountry);
-        elem.appendChild(pPrice);
+        elem.append(img);
+        elem.appendChild(cont);
+
+        
+        cont.appendChild(pName);
+        cont.appendChild(pMonth);
+        cont.appendChild(pAge);
+        cont.appendChild(pCountry);
+
+        cont.appendChild(priceCont);
+        priceCont.appendChild(pPrice);
 
         return elem;
     }
 }
 
 let searchCards = [
-    new SearchCard("Trip 1", "January", 12, "USA", 2500, true),
-    new SearchCard("Trip 2", "January", 8, "Turkey", 500, false),
-    new SearchCard("Trip 3", "February", 16, "USA", 5500, true),
-    new SearchCard("Trip 4", "March", 10, "UK", 2500, false)
+    new SearchCard("Trip 1", "January", 12, "USA", 2500),
+    new SearchCard("Trip 2", "January", 8, "Turkey", 500),
+    new SearchCard("Trip 3", "February", 16, "USA", 5500),
+    new SearchCard("Trip 4", "March", 10, "UK", 2500),
+    new SearchCard("Trip 5", "September", 20, "UK", 2500),
 ];
 
 
@@ -184,18 +198,13 @@ function findEqual(list, item) {
 }
 
 function updateCards() {
-    leftColumn.replaceChildren();
-    rightColumn.replaceChildren();
+    cardsContainer.replaceChildren();
 
     for (let i = 0; i < searchCards.length; i++) {
         const card = searchCards[i];
 
         if (checkMonths(card) && checkAge(card) && checkCountry(card) && checkPrice(card)) {
-            if (card.isLeft) {
-                leftColumn.appendChild(card.getCardElem());
-            } else {
-                rightColumn.appendChild(card.getCardElem());
-            }
+            cardsContainer.appendChild(card.getCardElem());
         }
     }
 }
