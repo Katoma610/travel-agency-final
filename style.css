@@ -355,6 +355,7 @@ header {
     align-items: center;
     width: 100vw;
     /* border: 2px solid red; */
+    /* height: 50vh; */
 }
 
 .filters {
@@ -421,24 +422,24 @@ header {
 .search-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     flex-direction: row-reverse;
-    width: 50%;
-    height: 100%;
+    width: 65%;
     /* border: 2px solid yellow; */
+    flex-wrap: wrap-reverse;
 }
 
 .search-cards-container {
     /* border: 2px solid green; */
-    width: 50%;
-    height: 100%;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .search-card {
-    width: 100%;
+    width: 60%;
     border: 2px solid grey;
     border-radius: 20px;
     display: flex;
@@ -446,12 +447,34 @@ header {
     justify-content: center;
     align-items: center;
     margin: 20px 0;
+    height: 20rem;
+    overflow: hidden;
+    position: relative;
 }
 
-.left-column, .right-column {
-    width: 50%;
+.search-card-container {
+    height: 50%;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.search-card img {
+    width: 100%;
     height: 100%;
-    margin: 20px;
+}
+
+.search-card-price-container {
+    width: 100%;
+    /* border: 2px solid red; */
+    font-size: 22px;
+    margin: 10px;
+    padding-left: 30px;
 }
 
 
