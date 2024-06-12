@@ -133,7 +133,7 @@ header {
     height: 80px;
 }
 
-.menu-wrapper a {
+.menu-wrapper a, .burger-menu-main-wrapper a {
     outline: none;
     border: none;
     background-color: white;
@@ -144,12 +144,12 @@ header {
     position: relative;
 }
 
-.menu-wrapper a:hover {
+.menu-wrapper a:hover, .burger-menu-main-wrapper a:hover {
     cursor: pointer;
     color: rgb(158, 0, 255);
 }
 
-.menu-wrapper a::after {
+.menu-wrapper a::after, .burger-menu-main-wrapper a::after {
     transition: all .5s ease;
     content: "";
     position: absolute;
@@ -160,11 +160,63 @@ header {
     opacity: 0;
 }
 
-.menu-wrapper a:hover::after {
+.menu-wrapper a:hover::after, .burger-menu-main-wrapper a:hover::after {
     opacity: 1;
     transform: translateX(-50%);
     width: 50px;
 }
+
+.burger-menu {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    z-index: 999;
+    top: 50px;
+    right: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    display: none;
+    box-shadow: 5px 5px 25px 3px black;
+    transition: all .3s ease;
+}
+
+.burger-menu:hover {
+    cursor: pointer;
+}
+
+.burger-menu img {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+}
+
+.burger-menu-main {
+    position: absolute;
+    height: 40vh;
+    width: 100%;
+    background-color: white;
+    display: none;
+    transition: all .5s ease-in;
+    position: fixed;
+    z-index: 998;
+}
+
+.burger-menu-main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 25px;
+    /* border: 2px solid red; */
+}
+
+.burger-menu-main-wrapper img {
+    width: 150px;
+}
+
 
 
 .why {
@@ -173,22 +225,24 @@ header {
     align-items: center;
     flex-direction: column;
     padding-bottom: 50px;
-    height: 50vh;
+    /* height: 50vh; */
     position: relative;
 }
 
 .why h2 {
     font-size: 40px;
-    padding-top: 20px;
+    margin-top: 80px;
+    text-align: center;
 }
 
 .just {
     font-size: 20px;
     padding-top: 20px;
+    text-align: center;
 }
 
 .cards-container {
-    margin-top: 30px;
+    margin: 50px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -201,6 +255,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .card img {
@@ -241,14 +296,18 @@ header {
     /* padding-bottom: 1000px; */
 }
 
+.hot-destinations h2 {
+    text-align: center;
+}
+
 .hot-destinations p {
     padding: 20px 0 30px 0;
     font-size: 17px;
 }
 
 .hot-card {
-    width: 300px;
-    height: 450px;
+    /* width: 50%;
+    height: 450px; */
     border-radius: 20px;
     /* background-color: green; */
     display: flex;
@@ -280,6 +339,7 @@ header {
     position: relative;
     transition: all .5s ease;
     right: 0;
+    /* border: 2px solid green; */
 }
 
 .hot-button {
@@ -295,13 +355,21 @@ header {
 }
 
 .left-button {
-    left: 40%;
+    /* position: absolute; */
+    left: 10%;
     top: 50%;
+    margin: 0 15px;
+    /* transform: translateY(-50%); */
+    /* color: white; */
 }
 
 .right-button {
-    right: 40%;
+    /* position: absolute; */
+    right: 10%;
     top: 50%;
+    margin: 0 15px;
+    /* transform: translateY(-50%); */
+    /* color: white; */
 }
 
 .hot-card img {
@@ -320,16 +388,18 @@ header {
 .hot-container {
     /* border: 2px solid green; */
     display: flex;
-    width: 500px;
+    /* width: 500px; */
     align-items: center;
     justify-content: space-around;
+    /* flex-wrap: wrap; */
+    position: relative;
 }
 
 
 
 .pre-search {
     margin-bottom: 100px;
-    height: 30vh;
+    /* height: 30vh; */
     color: white;
     background-image: url("./images/bgsearch.png");
     display: flex;
@@ -339,10 +409,17 @@ header {
 
 .pre-search h2 {
     font-size: 35px;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .pre-search-desc {
     font-size: 20px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.pre-search-but {
     margin-bottom: 30px;
 }
 
@@ -365,6 +442,7 @@ header {
     flex-direction: column;
     border: 2px solid grey;
     width: 300px;
+    margin-bottom: 50px;
 }
 
 .filter-button {
@@ -421,7 +499,7 @@ header {
 
 .search-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-end;
     flex-direction: row-reverse;
     width: 65%;
@@ -431,7 +509,7 @@ header {
 
 .search-cards-container {
     /* border: 2px solid green; */
-    width: 60%;
+    width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -439,14 +517,14 @@ header {
 }
 
 .search-card {
-    width: 60%;
+    /* width: 60%; */
     border: 2px solid grey;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
+    margin: 0px 20px 20px 20px;
     height: 20rem;
     overflow: hidden;
     position: relative;
@@ -480,12 +558,13 @@ header {
 
 
 footer {
-    height: 40vh;
+    /* height: 40vh; */
     width: 100%;
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer-container {
@@ -493,14 +572,19 @@ footer {
     /* border: 2px solid red; */
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer-section-container {
     height: 100%;
-    width: 30%;
+    /* width: 30%; */
     /* border: 2px solid green; */
+}
+
+.footer-img-desc {
+    width: 350px;
 }
 
 .footer-container img[src="./images/logo-white.png"] {
@@ -525,6 +609,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    width: 300px;
 }
 
 .footer-subscribe-container {
@@ -584,6 +669,7 @@ footer {
     width: 80%;
     justify-content: space-around;
     align-items: center;
+    margin: 20px 0;
 }
 
 .socials-container img {
@@ -647,4 +733,30 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 786px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    .menu-wrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 350px) {
+    .left-button, .right-button {
+        position: absolute;
+        color: white;
+        transform: translateY(-50%);
+    }
+
+    .right-button {
+        right: 0;
+    }
+
+    .left-button {
+        left: 0;
+    }
 }
