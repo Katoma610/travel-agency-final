@@ -24,6 +24,11 @@ let priceCheckboxes = document.querySelectorAll(".price-checkbox");
 
 let cardsContainer = document.querySelector(".search-cards-container");
 
+let burgerMenuBtn = document.querySelector(".burger-menu");
+let burgerMenu = document.querySelector(".burger-menu-main");
+let burgerMenuLink = document.querySelectorAll(".burger-menu-link");
+let burgerMenuImg = document.querySelector(".burger-menu-img");
+
 let offset = 0;
 let sliderInc = 300;
 
@@ -82,7 +87,6 @@ class SearchCard {
 
         elem.append(img);
         elem.appendChild(cont);
-
         
         cont.appendChild(pName);
         cont.appendChild(pMonth);
@@ -388,5 +392,24 @@ priceCheckboxes.forEach(checkbox => {
             chosenPrices.splice(findEqual(chosenPrices, splitName), 1);
             updateCards();
         }
+    });
+});
+
+
+burgerMenuBtn.addEventListener("click", () => {
+    if (burgerMenu.style.display !== "flex") {
+        burgerMenu.style.display = "flex";
+        burgerMenuImg.src = "./images/close.png";
+    } else {
+        burgerMenu.style.display = "none";
+        burgerMenuImg.src = "./images/burger.png";
+    }
+    
+});
+
+burgerMenuLink.forEach(link => {
+    link.addEventListener("click", () => {
+        burgerMenu.style.display = "none";
+        burgerMenuImg.src = "./images/burger.png";
     });
 });
