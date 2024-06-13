@@ -126,6 +126,7 @@ header {
     position: fixed;
     top: 40px;
     z-index: 999;
+    flex-wrap: wrap;
 }
 
 .menu-wrapper img {
@@ -745,18 +746,18 @@ footer {
     }
 }
 
-@media (max-width: 400px) {
-    .left-button, .right-button {
+@media (max-width: 450px) {
+    .right-button {
+        right: 0;
         position: absolute;
         color: white;
         transform: translateY(-50%);
     }
 
-    .right-button {
-        right: 0;
-    }
-
     .left-button {
         left: 0;
+        position: absolute;
+        color: white;
+        transform: translateY(-50%);
     }
 }
