@@ -44,12 +44,13 @@ function removeValue() {
 }
 
 class SearchCard {
-    constructor(name, month, age, country, price) {
+    constructor(name, month, age, country, price, img) {
         this.name = name;
         this.month = month;
         this.age = age;
         this.country = country;
         this.price = price;
+        this.img = img;
     }
 
     getCardElem() {
@@ -57,7 +58,7 @@ class SearchCard {
         elem.classList.add("search-card");
 
         let img = document.createElement("img");
-        img.src = "./images/statue.png";
+        img.src = this.img;
 
         let cont = document.createElement("div");
         cont.classList.add("search-card-container");
@@ -101,11 +102,11 @@ class SearchCard {
 }
 
 let searchCards = [
-    new SearchCard("Trip 1", "January", 12, "USA", 2500),
-    new SearchCard("Trip 2", "January", 8, "Turkey", 500),
-    new SearchCard("Trip 3", "February", 16, "USA", 5500),
-    new SearchCard("Trip 4", "March", 10, "UK", 2500),
-    new SearchCard("Trip 5", "September", 20, "UK", 2500),
+    new SearchCard("Trip 1", "January", 12, "USA", 2500, "./images/statue.png"),
+    new SearchCard("Trip 2", "January", 8, "Turkey", 500, "./images/turkey.png"),
+    new SearchCard("Trip 3", "February", 16, "USA", 5500, "./images/statue.png"),
+    new SearchCard("Trip 4", "March", 10, "UK", 2500, "./images/uk.png"),
+    new SearchCard("Trip 5", "September", 20, "UK", 2500, "./images/uk.png"),
 ];
 
 
